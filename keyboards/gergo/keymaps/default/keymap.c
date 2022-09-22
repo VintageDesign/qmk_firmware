@@ -25,26 +25,26 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-------------------------------------------.                         ,-------------------------------------------.
  * | L1/ESC |   Q  |   W  |   E  |   R  |   T  |                         |   Y  |   U  |   I  |   O  |   P  |  | \   |
  * |--------+------+------+------+------+------|------.           .------|------+------+------+------+------+--------|
- * |Ctrl/BS |   A  |   S  |  D   |   F  |   G  | RMB  |           |      |   H  |   J  |   K  |   L  | ;  : |  ' "   |
+ * |Ctrl/BS |   A  |   S  |  D   |   F  |   G  | RMB  |           | `    |   H  |   J  |   K  |   L  | ;  : |  ' "   |
  * |--------+------+------+------+------+------|------|           |------|------+------+------+------+------+--------|
- * | LShift |   Z  |   X  |   C  |   V  |   B  | LMB  |           |      |   N  |   M  | ,  < | . >  | /  ? |  - _   |
+ * | LShift |   Z  |   X  |   C  |   V  |   B  | LMB  |           | ~    |   N  |   M  | ,  < | . >  | /  ? |  - _   |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
  *                    .----------.   .-------.                                 .------.   .-----.
- *                    | Super/Del|   |Ent/ALT|                                 | Tab  |   |BKSP |
+ *                    | Super/Del|   |Ent/alt|                                 | BSKP |   |BKSP |
  *                    '----------'   '-------'                                 `------.   '-----'
  *                                        ,-------.                      ,-------.
  *                                        | MMB   |                      | PgDn  |
  *                                 ,------|-------|                      |-------|------.
  *                                 | SYMB | NUMB  |                      | SYMB  | NUMB |
- *                                 | Space| Escape|                      | Mod   |Space |
+ *                                 | Space| TAB   |                      | Tab   |Space |
  *                                 |      |       |                      |       |      |
  *                                 `--------------'                      `--------------'
  */
 [BASE] = LAYOUT_gergo(
     LT(NUMB, KC_ESC),       KC_Q,  KC_W,   KC_E,   KC_R, KC_T,                                          KC_Y,    KC_U, KC_I, KC_O,   KC_P,    KC_PIPE,
-    MT(MOD_LCTL, KC_BSPC),  KC_A,  KC_S,   KC_D,   KC_F, KC_G, KC_BTN2,                       KC_TRNS,  KC_H,    KC_J, KC_K, KC_L,   KC_SCLN, KC_QUOT,
-    KC_RSFT,                KC_Z,  KC_X,   KC_C,   KC_V, KC_B, KC_BTN1, KC_BTN3,     KC_PGDN, KC_BSPC,  KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_MINS,
-  MT(MOD_LGUI, KC_DEL), MT(MOD_LALT, KC_ENT), LT(SYMB, KC_SPC), LT(NUMB, KC_ESC),    LT(SYMB, KC_ENT), LT(NUMB, KC_SPC), KC_TAB, KC_BSPC
+    MT(MOD_LCTL, KC_BSPC),  KC_A,  KC_S,   KC_D,   KC_F, KC_G, KC_BTN2,                       KC_GRV ,  KC_H,    KC_J, KC_K, KC_L,   KC_SCLN, KC_QUOT,
+    KC_RSFT,                KC_Z,  KC_X,   KC_C,   KC_V, KC_B, KC_BTN1, KC_BTN3,     KC_PGDN, KC_TILD,  KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_MINS,
+  MT(MOD_LGUI, KC_DEL), MT(MOD_LALT, KC_ENT), LT(SYMB, KC_SPC), LT(NUMB, KC_TAB),    LT(SYMB, KC_TAB), LT(NUMB, KC_SPC), KC_BSPC, KC_BSPC
     ),
 /* Keymap 1: Symbols layer
  *
